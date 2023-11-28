@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
+
 import java.util.Date;
 
 @Entity
@@ -14,7 +15,7 @@ public class Estagio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    private String nome;
     private Date dataInicio;
     private Date dataFim;
     private int cargaHorariaTotal;
@@ -97,4 +98,12 @@ public class Estagio {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 }

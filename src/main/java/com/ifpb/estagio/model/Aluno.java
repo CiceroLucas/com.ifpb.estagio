@@ -14,8 +14,6 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    private int matricula;
     private String nome;
 
     @ManyToOne
@@ -36,14 +34,6 @@ public class Aluno {
         this.id = id;
     }
 
-    public int getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -58,5 +48,12 @@ public class Aluno {
 
     public void setOrientador(Orientador orientador) {
         this.orientador = orientador;
+    }
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
 }
